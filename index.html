@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My School</title>
     <link rel="stylesheet" href="css/style.css"/>
+    <script src="js/script.js"></script>
 </head>
 <body>
+
     <nav>
-        <img src="assets/dumbbell.png" alt="Logo" class="logo" width="70px" height="70px"/>
+        <img src="assets/logo_stiki.png" alt="Logo" class="logo" width="70px" height="70px"/>
         <ul class="nav-items">
             <li>Home</li>
             <li>Our Profile</li>
@@ -16,25 +18,134 @@
             <li>Message Us</li>
         </ul>
     </nav>
+
     <header>
-        <h1>Hi Abrar, welcome to our website</h1>
-        <h4>Please Enjoy</h4>
-        <img  src="assets/road.jpeg"/>
+        <h1 id="welcome-message"></h1>
+        <p>Sekolah Tinggi Informatika & Komputer Indonesia (STIKI) Malang adalah lembaga pendidikan tinggi yang berfokus pada bidang teknologi informasi. 
+            Berlokasi di Malang, STIKI Malang menawarkan program studi di bidang informatika, sistem informasi dan desain komunikasi visual. 
+            Mempersiapkan para mahasiswa untuk menjadi profesional IT yang mampu mengaplikasikan ilmu dan teknologi baru di dunia teknologi informasi.</p>
+        <h3>Visi</h3>
+        <p>Menjadi satu dari sepuluh Perguruan Tinggi ICT berkualitas di Indonesia dan diakui dunia Internasional.</p>
+        <h3>Misi</h3>
+        <p>1. Menyelenggarakan pendidikan, pengabdian serta penelitian yang berkualitas serta mampu bekerjasama dengan lembaga terkemuka lain 
+            untuk menjawab tantangan serta perkembangan lokal dan global melalui pendekatan ICT.
+        </p>
+        <p>
+            2. Menghasilkan lulusan profesional yang menjunjung tinggi prinsip dan nilai ELANG, budaya Indonesia serta memiliki jiwa leadership dan entrepreneurship.
+        </p>
+        <!-- <button id="tombol">Ganti Nama</button> -->
+
+        <img  src="assets/stiki.png"/>
+        <img  src="assets/stiki_akreditasi.jpg"/>
         <hr>
     </header>
+
+    <div>
+        <h1 style="text-align: center;"> Jurusan </h1>
+    </div>
+
     <div class="facilitations">
         <div>
-            <div class="circle" style="background-image: url('assets/daun.png');"></div>
-            <h4>Football Arena</h4>
+            <div class="circle" style="background-image: url('assets/informatika.jpg');"></div>
+            <h4>Informatika - S1</h4>
         </div>
         <div>
-            <div class="circle"></div>
-            <h4>Auditorium</h4>
+            <div class="circle" style="background-image: url('assets/sistem_informasi.jpg');"></div>
+            <h4>Sistem Informasi - <br> D3 dan S1 </h4>
         </div>
         <div>
-            <div class="circle"></div>
-            <h4>Student Canteen</h4>
+            <div class="circle" style="background-image: url('assets/dkv.jpg');"></div>
+            <h4>Desain Komunikasi <br> Visual - S1</h4>
         </div>
     </div>
+
+    <hr> 
+
+    <div>
+        <h1 class="message" style="padding-left: 215px;"> Message Us </h1>
+    </div>
+
+    <main class="content">
+        <div>
+            <form name="message-form" onsubmit="return validateForm()">
+                <table>
+                    <br>
+                    <tr>
+                        <th>Nama</th>
+                        <td>:</td>
+                        <td> <input name="full-name" type="text" placeholder="Nama" style="width: 110%;"/></td>
+                    </tr>
+                    <tr>
+                        <th>Tanggal Lahir</th>
+                        <td>:</td>
+                        <td> <input name="birth-date" type="date" style="width: 111%;"/></td>
+                    </tr>
+                    <tr>
+                        <th>Jenis Kelamin</th>
+                        <td>:</td>
+                        <td> 
+                            <input type="radio" id="male" name="gender" value="Laki-Laki"/> 
+                            <label for="male">Laki-Laki</label>
+                
+                            <input type="radio" id="female" name="gender" value="Perempuan"/> 
+                            <label for="female">Perempuan</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Pesan</th>
+                        <td>:</td>
+                        <td> <textarea name="messages" rows="5" placeholder="Pesan" style="width: 110%;"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <input type="submit" value="Submit" style="width: 108%;"/>
+                        </td>
+                    </tr>
+                </table>
+            </form> 
+        </div>
+
+        <div>
+            <fieldset>
+                <table>
+                    <tr>
+                        <th>Current-Time</th>      
+                        <td>:</td>
+                        <td><span id="sender-current-time"></span></td>
+                    </tr>
+                    <tr>
+                        <th>&nbsp;</th> 
+                    </tr>
+                    <tr>
+                        <th>Nama</th>
+                        <td>:</td>
+                        <td> <span id="sender-full-name"></span> </td>
+                    </tr>
+                    <tr>
+                        <th>Tanggal Lahir</th>
+                        <td>:</td>
+                        <td> <span id="sender-birth-date"></span> </td>
+                    </tr>
+                    <tr>
+                        <th>Jenis Kelamin</th>
+                        <td>:</td>
+                        <td> <span id="sender-gender"></span> </td>
+                    </tr>
+                    <tr>
+                        <th>Pesan</th>
+                        <td>:</td>
+                        <td> <span id="sender-messages"></span> </td>
+                    </tr>
+                </table>
+            </fieldset>
+        </div>
+    </main>
+
+    <hr>
+
+    <footer>
+        <p> Created by &copy; AbrarRadan </p>
+    </footer>
+
 </body>
 </html>
