@@ -10,32 +10,33 @@
 <body>
 
     <nav>
-        <img src="assets/logo_stiki.png" alt="Logo" class="logo" width="70px" height="70px"/>
+        <a href="index.html"> <img src="assets/logo_stiki.png" alt="Logo" class="logo" width="70px" height="70px"/> </a>
         <div class="nav-container">
             <ul class="nav-items">
-                <li>Home</li>
-                <li>Profil</li>
-                <li>Jurusan</li>
-                <li>Message Us</li>
+                <li src="index.html">Home</li>
+                <li id="profil-li">Profil</li>
+                <li id="jurusan-li">Jurusan</li>
+                <li id="message-li">Message Us</li>
             </ul>
         </div>
     </nav>
-    <hr class="horizontal-line">
-    <header>
+
+    <header id="profil-header">
         <h1 id="welcome-message"></h1>
-        <p>Sekolah Tinggi Informatika & Komputer Indonesia (STIKI) Malang adalah lembaga pendidikan tinggi yang berfokus pada bidang teknologi informasi. 
+        <div class="centered-text">
+            <p>Sekolah Tinggi Informatika & Komputer Indonesia (STIKI) Malang adalah lembaga pendidikan tinggi yang berfokus pada bidang teknologi informasi. 
             Berlokasi di Malang, STIKI Malang menawarkan program studi di bidang informatika, sistem informasi dan desain komunikasi visual. 
             Mempersiapkan para mahasiswa untuk menjadi profesional IT yang mampu mengaplikasikan ilmu dan teknologi baru di dunia teknologi informasi.</p>
-        <h3>Visi</h3>
-        <p>Menjadi satu dari sepuluh Perguruan Tinggi ICT berkualitas di Indonesia dan diakui dunia Internasional.</p>
-        <h3>Misi</h3>
-        <p>1. Menyelenggarakan pendidikan, pengabdian serta penelitian yang berkualitas serta mampu bekerjasama dengan lembaga terkemuka lain 
+            <h3>Visi</h3>
+            <p>Menjadi satu dari sepuluh Perguruan Tinggi ICT berkualitas di Indonesia dan diakui dunia Internasional.</p>
+            <h3>Misi</h3>
+            <p>1. Menyelenggarakan pendidikan, pengabdian serta penelitian yang berkualitas serta mampu bekerjasama dengan lembaga terkemuka lain 
             untuk menjawab tantangan serta perkembangan lokal dan global melalui pendekatan ICT.
-        </p>
-        <p>
+            </p>
+            <p>
             2. Menghasilkan lulusan profesional yang menjunjung tinggi prinsip dan nilai ELANG, budaya Indonesia serta memiliki jiwa leadership dan entrepreneurship.
-        </p>
-        
+            </p>
+        </div>
         <img id="sliderImage" src="assets/stiki.png" />
         <button onclick="changeImage(-1)"> &lt; </button>
         <button onclick="changeImage(1)"> &gt; </button>
@@ -48,7 +49,7 @@
         <h1 style="text-align: center;"> Jurusan </h1>
     </div>
 
-    <div class="facilitations">
+    <div class="jurusan" id="list-jurusan">
         <div>
             <div class="circle" style="background-image: url('assets/informatika.jpg');"></div>
             <h4>Informatika - S1</h4>
@@ -70,7 +71,7 @@
     </div>
 
     <main class="content">
-        <div>
+        <div id="formulir">
             <form name="message-form" onsubmit="return validateForm()">
                 <table>
                     <br>
@@ -112,6 +113,9 @@
         <div>
             <fieldset>
                 <table>
+                    <tr>
+                        <th>&nbsp;</th> 
+                    </tr>
                     <tr>
                         <th>Current-Time</th>      
                         <td>:</td>

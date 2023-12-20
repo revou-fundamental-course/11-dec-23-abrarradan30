@@ -1,4 +1,4 @@
-// Prompt ucapan selamat datang pada website
+// 1. Prompt ucapan selamat datang pada website
 // document.addEventListener('DOMContentLoaded', function() {
 //     var userName = prompt('Masukkan Nama Anda:');
 //     displayWelcomeMessage(userName);
@@ -13,7 +13,7 @@
 //     }
 // }
 
-// Form validation 
+// 2. Form validation 
 function validateForm() {
     const name = document.forms["message-form"]["full-name"].value;
     const birthDate = document.forms["message-form"]["birth-date"].value;
@@ -47,17 +47,17 @@ function formatDate(inputDate) {
     return new Date(inputDate).toLocaleDateString('id-ID', options);
 }
 
-// Slider 
+// 3. Slider 
 let currentImageIndex = 0;
 const images = [
     "assets/stiki.png",
     "assets/stiki2.jpg",
+    "assets/stiki_akreditasi.jpg",
 ];
 
 function changeImage(n) {
     currentImageIndex += n;
 
-    // Check if index is out of bounds
     if (currentImageIndex >= images.length) {
         currentImageIndex = 0;
     } else if (currentImageIndex < 0) {
@@ -66,3 +66,35 @@ function changeImage(n) {
 
     document.getElementById("sliderImage").src = images[currentImageIndex];
 }
+
+// 4. Mengarahkan pada profil 
+document.addEventListener('DOMContentLoaded', function () {
+    // Ambil elemen <li> dan <header> berdasarkan ID
+    const profilLi = document.getElementById('profil-li');
+    const profilHeader = document.getElementById('profil-header');
+
+    // Tambahkan event listener untuk mengarahkan ke <header> ketika <li> diklik
+    profilLi.addEventListener('click', function () {
+        window.location.href = '#' + profilHeader.id;
+    });
+});
+
+// 5. Mengarahkan pada jurusan
+document.addEventListener('DOMContentLoaded', function () {
+    const jurusanLi = document.getElementById('jurusan-li');
+    const listJurusan = document.getElementById('list-jurusan');
+
+    jurusanLi.addEventListener('click', function () {
+        window.location.href = '#' + listJurusan.id;
+    });
+});
+
+// 6. Mengarahkan pada message us
+document.addEventListener('DOMContentLoaded', function () {
+    const messageLi = document.getElementById('message-li');
+    const messageForm = document.getElementById('formulir');
+
+    messageLi.addEventListener('click', function () {
+        window.location.href = '#' + messageForm.id;
+    });
+});
