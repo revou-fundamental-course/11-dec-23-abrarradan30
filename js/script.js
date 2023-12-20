@@ -48,20 +48,21 @@ function formatDate(inputDate) {
 }
 
 // Slider 
-var slideIndex = 1;
-showDivs(slideIndex);
+let currentImageIndex = 0;
+const images = [
+    "assets/stiki.png",
+    "assets/stiki2.jpg",
+];
 
-function plusDivs(n) {
-    showDivs(slideIndex += n);
-}
+function changeImage(n) {
+    currentImageIndex += n;
 
-function showDivs(n) {
-    var i;
-    var x = document.getElementsByClassName("mySlide");
-    if (n > x.length) (slideIndex = 1)
-    if (n < 1) (slideIndex = x.length);
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
+    // Check if index is out of bounds
+    if (currentImageIndex >= images.length) {
+        currentImageIndex = 0;
+    } else if (currentImageIndex < 0) {
+        currentImageIndex = images.length - 1;
     }
-    x[slideIndex].style.display = "block";
+
+    document.getElementById("sliderImage").src = images[currentImageIndex];
 }

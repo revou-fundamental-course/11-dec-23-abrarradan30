@@ -7,12 +7,25 @@ nav {
     align-items: center;
     padding: 20px;
 }
+.nav-container {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 5px;
+}
 .nav-items {
-    list-style-type: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
 }
 .nav-items li {
-    display: inline;
-    margin-right: 20px;
+    margin-right: 10px;
+    padding: 8px 15px;
+    background-color: grey;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
 }
 header {
     text-align: center;
@@ -38,6 +51,13 @@ header img {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.horizontal-line {
+    border: none;
+    height: 2px; 
+    background-color: black;
+    width: 100%; 
 }
 
 .content {

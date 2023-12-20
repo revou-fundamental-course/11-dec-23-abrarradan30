@@ -11,14 +11,16 @@
 
     <nav>
         <img src="assets/logo_stiki.png" alt="Logo" class="logo" width="70px" height="70px"/>
-        <ul class="nav-items">
-            <li>Home</li>
-            <li>Our Profile</li>
-            <li>Achievment</li>
-            <li>Message Us</li>
-        </ul>
+        <div class="nav-container">
+            <ul class="nav-items">
+                <li>Home</li>
+                <li>Profil</li>
+                <li>Jurusan</li>
+                <li>Message Us</li>
+            </ul>
+        </div>
     </nav>
-
+    <hr class="horizontal-line">
     <header>
         <h1 id="welcome-message"></h1>
         <p>Sekolah Tinggi Informatika & Komputer Indonesia (STIKI) Malang adalah lembaga pendidikan tinggi yang berfokus pada bidang teknologi informasi. 
@@ -33,12 +35,14 @@
         <p>
             2. Menghasilkan lulusan profesional yang menjunjung tinggi prinsip dan nilai ELANG, budaya Indonesia serta memiliki jiwa leadership dan entrepreneurship.
         </p>
-        <!-- <button id="tombol">Ganti Nama</button> -->
-
-        <img  src="assets/stiki.png"/>
-        <img  src="assets/stiki_akreditasi.jpg"/>
-        <hr>
+        
+        <img id="sliderImage" src="assets/stiki.png" />
+        <button onclick="changeImage(-1)"> &lt; </button>
+        <button onclick="changeImage(1)"> &gt; </button>
+          
     </header>
+
+    <hr class="horizontal-line">
 
     <div>
         <h1 style="text-align: center;"> Jurusan </h1>
@@ -59,7 +63,7 @@
         </div>
     </div>
 
-    <hr> 
+    <hr class="horizontal-line"> 
 
     <div>
         <h1 class="message" style="padding-left: 215px;"> Message Us </h1>
@@ -141,7 +145,7 @@
         </div>
     </main>
 
-    <hr>
+    <hr class="horizontal-line">
 
     <footer>
         <p> Created by &copy; AbrarRadan </p>
