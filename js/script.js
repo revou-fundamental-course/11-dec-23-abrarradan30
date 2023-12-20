@@ -1,17 +1,17 @@
 // 1. Prompt ucapan selamat datang pada website
-// document.addEventListener('DOMContentLoaded', function() {
-//     var userName = prompt('Masukkan Nama Anda:');
-//     displayWelcomeMessage(userName);
-// });
+document.addEventListener('DOMContentLoaded', function() {
+    var userName = prompt('Masukkan Nama Anda:');
+    displayWelcomeMessage(userName);
+});
 
-// function displayWelcomeMessage(name) {
-//     var welcomeMessageElement = document.getElementById('welcome-message');
-//     if (name) {
-//         welcomeMessageElement.textContent = 'Hi ' + name + ', Selamat Datang di Website STIKI Malang!';
-//     } else {
-//         welcomeMessageElement.textContent = 'Selamat Datang di Website STIKI Malang!';
-//     }
-// }
+function displayWelcomeMessage(name) {
+    var welcomeMessageElement = document.getElementById('welcome-message');
+    if (name) {
+        welcomeMessageElement.textContent = 'Hi ' + name + ', Selamat Datang di Website STIKI Malang!';
+    } else {
+        welcomeMessageElement.textContent = 'Selamat Datang di Website STIKI Malang!';
+    }
+}
 
 // 2. Form validation 
 function validateForm() {

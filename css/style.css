@@ -87,6 +87,7 @@ header img {
 }
 footer > p {
     text-align: end;
+    padding-right: 10px;
 }
 .message th {
     text-align: left;
